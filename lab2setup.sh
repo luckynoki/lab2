@@ -8,5 +8,5 @@ pip install Pillow
 git clone https://github.com/PacktPublishing/Django-4-for-the-Impatient
 cp -R Django-4-for-the-Impatient/Chapter11/moviereviewsproject/ moviereviewsproject
 cd moviereviewsproject
-sed -i 's/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \['$DISALLOWED_IP'\]/g' ./moviereviews/settings.py
+sed -i 's/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \['\'$DISALLOWED_IP\''\]/g' ./moviereviews/settings.py
 python3 manage.py runserver 0.0.0.0:8000
